@@ -1,0 +1,38 @@
+.top-bar {
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+
+        img {
+            display: block;
+            width: 130px;
+            height: 38px;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: 24px;
+    }
+
+    @include onTablet {
+        padding: 36px 72px;
+
+        &__icons {
+          gap: 32px;
+        }
+
+        &__logo img {
+          width: 187px;
+          height: 56px;
+        }
+    }
+
+    @include onDesktop {
+        padding: 36px 120px;
+    }
+}
