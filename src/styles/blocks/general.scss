@@ -5,12 +5,19 @@
 .layout-grid {
   @include grid-columns(2, 1fr, 20px);
 
+  width: 100%;
+  margin: 0 auto;
+
   @include on-tablet {
     @include grid-columns(6, 80px, 24px);
+
+    max-width: 696px;
   }
 
   @include on-desktop {
     @include grid-columns(12, 63px, 24px);
+
+    max-width: 1020px;
   }
 }
 
@@ -35,5 +42,15 @@
 
   @include on-desktop {
     height: 51px;
+  }
+}
+
+a, button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
   }
 }
