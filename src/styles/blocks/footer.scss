@@ -1,148 +1,154 @@
 .footer {
-    background-color: $color-eerie-black;
+  background-color: $color-eerie-black;
 
-    &__content {
-        padding: 80px 20px 0;
+  &__content {
+    padding: 80px 20px 0;
 
-        @include onTablet {
-            padding: 120px 72px 102px;
-        }
-
-        @include onDesktop {
-            padding: 180px 120px 164px;
-        }
+    @include on-tablet {
+      padding: 120px 72px 102px;
     }
 
-    &__title {
-        margin: 0 0 48px;
-        @include text(500, 32px, 32px, -1.5px);
-        text-align: center;
-        color: $color-white;
-        grid-column: 1 / -1;
+    @include on-desktop {
+      padding: 180px 120px 164px;
+    }
+  }
 
-        @include onTablet {
-            @include text(500, 48px, 100%, -1.5px);
-            grid-column: 2 / -2;
-        }
+  &__title {
+    margin: 0 0 48px;
 
-        @include onDesktop {
-            @include text(600, 48px, 100%, -1.5px);
-        }
+    @include text(500, 32px, 32px, -1.5px);
+
+    text-align: center;
+    color: $color-white;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      @include text(500, 48px, 100%, -1.5px);
+
+      grid-column: 2 / -2;
     }
 
-    &__form {
-        grid-column: 1 / -1;
+    @include on-desktop {
+      @include text(600, 48px, 100%, -1.5px);
+    }
+  }
 
-        @include onTablet {
-            grid-column: 1/4;
-        }
+  &__form {
+    grid-column: 1 / -1;
 
-        @include onDesktop {
-            grid-column: 1/6;
-        }
+    @include on-tablet {
+      grid-column: 1/4;
     }
 
-    &__field {
-        background-color: $color-light-gray;
-        border-radius: 40px;
-        grid-column: 1/-1;
-        height: 48px;
-        margin-bottom: 16px;
-        width: 100%;
+    @include on-desktop {
+      grid-column: 1/6;
+    }
+  }
 
-        &::placeholder {
-            @include text(400, 14px, 20px, 0px);
-            color: $color-text-placeholder;
-            padding-left: 16px;
-        }
+  &__field {
+    background-color: $color-light-gray;
+    border-radius: 40px;
+    grid-column: 1/-1;
+    height: 48px;
+    margin-bottom: 16px;
+    width: 100%;
 
-        @include onTablet {
-            grid-column: 1/4;
-            width: 100%;
-        }
+    &::placeholder {
+      @include text(400, 14px, 20px, 0);
+
+      color: $color-text-placeholder;
+      padding-left: 16px;
     }
 
-    &__area {
-        background-color: $color-light-gray;
-        border-radius: 16px;
-        grid-column: 1/-1;
-        height: 148px;
-        margin-bottom: 32px;
-        width: 100%;
+    @include on-tablet {
+      grid-column: 1/4;
+      width: 100%;
+    }
+  }
 
-        &::placeholder {
-            @include text(400, 14px, 20px, 0px);
-            color: $color-text-placeholder;
-            padding: 14px 0 0 16px;
-        }
+  &__area {
+    background-color: $color-light-gray;
+    border-radius: 16px;
+    grid-column: 1/-1;
+    height: 148px;
+    margin-bottom: 32px;
+    width: 100%;
 
-        @include onTablet {
-            grid-column: 1/4;
-            width: 100%;
-        }
+    &::placeholder {
+      @include text(400, 14px, 20px, 0);
+
+      color: $color-text-placeholder;
+      padding: 14px 0 0 16px;
     }
 
-    &__btn {
+    @include on-tablet {
+      grid-column: 1/4;
+      width: 100%;
+    }
+  }
 
-        &:hover {
-            background-color: rgba(232, 232, 240, 0.4);
-        }
-
-        &:active {
-            background-color: rgba(232, 232, 240, 0.64);
-        }
-
-        @include onTablet {
-            grid-column: 1/4;
-        }
+  &__btn {
+    &:hover {
+      background-color: rgba(232, 232, 240, 0.4);
     }
 
-    &__contacts {
-        padding: 48px 0px 120px;
-        grid-column: 1/-1;
-
-        @include onTablet {
-            padding: 0;
-            grid-column: 4/6;
-        }
-
-        @include onDesktop {
-            grid-column: -6/-2;
-        }
+    &:active {
+      background-color: rgba(232, 232, 240, 0.64);
     }
 
-    &__contact {
-        margin-bottom: 24px;
-        grid-column: 1 / -1;
+    @include on-tablet {
+      grid-column: 1/4;
+    }
+  }
 
-        &-label {
-            margin: 0 0 8px;
-            @include text(400, 14px, 140%, 0px);
-            color: $color-white;
-        }
+  &__contacts {
+    padding: 48px 0 120px;
+    grid-column: 1/-1;
 
-        &-link {
-            @include text(500, 16px, 140%, 0px);
-            color: $color-white;
-            text-decoration: none;
-        }
+    @include on-tablet {
+      padding: 0;
+      grid-column: 4/6;
     }
 
-    &__logo {
-        display: block;
-        width: 100%;
-        height: 200px;
-        background-image: url('../images/footer/footer-logo-mob.png');
-
-        @include onTablet {
-            background-image: url('../images/footer/footer-logo-tablet.png');
-            height: 480px;
-        }
-
-        @include onDesktop {
-            background-image: url('../images/footer/footer-logo-desk.png');
-            height: 555px;
-        }
+    @include on-desktop {
+      grid-column: -6/-2;
     }
+  }
+
+  &__contact {
+    margin-bottom: 24px;
+    grid-column: 1 / -1;
+
+    &-label {
+      margin: 0 0 8px;
+
+      @include text(400, 14px, 140%, 0);
+
+      color: $color-white;
+    }
+
+    &-link {
+      @include text(500, 16px, 140%, 0);
+
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-image: url('../images/footer/footer-logo-mob.png');
+
+    @include on-tablet {
+      background-image: url('../images/footer/footer-logo-tablet.png');
+      height: 480px;
+    }
+
+    @include on-desktop {
+      background-image: url('../images/footer/footer-logo-desk.png');
+      height: 555px;
+    }
+  }
 }
-
