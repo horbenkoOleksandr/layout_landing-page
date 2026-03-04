@@ -13,6 +13,10 @@
 
   &--burger {
     background-image: url('../images/icons/icon-burger.svg');
+
+    &:hover {
+      background-image: url('../images/icons/icon-burger-hover.svg');
+    }
   }
 
   &--close {

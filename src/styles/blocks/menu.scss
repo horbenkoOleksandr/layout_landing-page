@@ -2,6 +2,7 @@
   height: 100vh;
   background-color: $color-menu;
   overflow: auto;
+  z-index: 100;
 
   &__top {
     margin-bottom: 24px;

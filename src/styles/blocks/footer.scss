@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 1;
   background-color: $color-eerie-black;
 
   &__content {
@@ -54,6 +56,12 @@
     width: 100%;
     padding-left: 16px;
 
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+
     &::placeholder {
       @include text(400, 14px, 20px, 0);
 
@@ -80,6 +88,12 @@
     margin-bottom: 32px;
     width: 100%;
     padding: 14px 16px;
+
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
 
     &::placeholder {
       @include text(400, 14px, 20px, 0);
